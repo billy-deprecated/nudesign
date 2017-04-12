@@ -1,0 +1,34 @@
+/* Stylesheet for inclass project by Nu Designs */
+
+#sideMenu {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  border-right: 2px solid gray;
+  background-color: #e3edef;
+}
+
+#logo {
+  margin-left: 15px;
+  color: blue;
+  font-size: 35px;
+  font-style: italic;
+}
+
+#menuPic {
+  height: 150px;
+  width: 150px;
+  margin-left: 15px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+#menuItems{
+  margin-top: 30px;
+}
+
+.menuItem {
+  margin: 25px;
+  margin-left: 15px;
+  font-size: 25px;
+}

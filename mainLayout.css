@@ -4,15 +4,18 @@
   height: 100%;
   width: 180px;
   position: fixed;
-  border-right: 2px solid gray;
-  background-color: #e3edef;
+  border-right: 1px solid gray;
+  background-color: #d9e1e2;
 }
 
 #logo {
-  margin-left: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
   color: blue;
-  font-size: 35px;
+  font-size: 40px;
   font-style: italic;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 #menuPic {
@@ -23,12 +26,23 @@
   margin-top: 20px;
 }
 
-#menuItems{
+#menuItems  {
   margin-top: 30px;
 }
 
 .menuItem {
-  margin: 25px;
-  margin-left: 15px;
-  font-size: 25px;
+  font-size: 30px;
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 20px;
+}
+
+.selectedMenuItem {
+  color: white;
+  background-color: #0ca001;
+  border-right: 5px solid #78e570;
+}
+
+.hovered {
+  background-color: #e3edef;
+  border-right: 5px solid blue;
 }

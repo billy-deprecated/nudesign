@@ -9,10 +9,13 @@
 <!-- Load style sheets -->
 <link rel='stylesheet' href=
   'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css'>
-<link rel='stylesheet' href='mainLayout.css'>
+<link rel='stylesheet' href='assets/mainLayout.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway'>
+<link href="assets/flag-icon-css-master/assets/docs.css" rel="stylesheet">
+  <link href="assets/flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
 <script src=
   'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='templates.js'></script>
 
 <script>
 
@@ -45,15 +48,19 @@ $(document).on('click', '.menuItem', function(evt){
   // select the new one
   $(this).removeClass('hovered');
   $(this).addClass('selectedMenuItem');
+
   // TODO: reload to new respective view
+  var newMode = $(this).attr('id');
+  $('#mode-panel').html(templates[newMode]);
 });
+
+$(document)
 
 </script>
 
 </head>
 
 <body>
-
   <div id="sideMenu">
     <div id="logo"> inclass </div>
     <img id="menuPic" src="graphics/new-user.png">
@@ -69,6 +76,18 @@ $(document).on('click', '.menuItem', function(evt){
       </div>
     </div>
   </div>
-
+  <div id="mainWindow">
+    <div id="top-bar">
+      <div class="welcome-message"> Hi Ruby!</div>
+      <button class="btn btn-danger" type="button" id="logout-button">Logout</button>
+      <div id="language-group">
+        <div id="language-icon"><span class="flag-icon flag-icon-us"></div>
+        <button class="btn btn-success" type="button" id="language-button">English</button>
+      </div>
+      
+    </div>
+    <div id="mode-panel">
+    </div>
+  </div>
 </body>
 </html>

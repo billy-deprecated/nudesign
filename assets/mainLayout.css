@@ -7,6 +7,37 @@
   border-right: 1px solid gray;
   background-color: #d9e1e2;
 }
+#mainWindow {
+  margin-left: 180px;
+}
+
+#language-group {
+  float: right;
+  margin-right: 30px;
+}
+#language-icon {
+  display: inline-block;
+}
+#language-button {
+  height: 40px;
+}
+
+#logout-button {
+  float: right;
+  display: block;
+  margin-right: 30px;
+}
+
+#top-bar {
+  width: 100%;
+}
+
+.welcome-message {
+  margin: 20px 0px 0px 30px;
+  width: 300px;
+  display: inline-block;
+  font-size: 60px;
+}
 
 #logo {
   margin-top: 10px;

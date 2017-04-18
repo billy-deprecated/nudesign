@@ -34,12 +34,14 @@
   font-size: 30px;
   font-family: 'Alegreya Sans', sans-serif;
   padding: 20px;
+  cursor: pointer;
 }
 
 .selectedMenuItem {
   color: white;
   background-color: #0ca001;
   border-right: 5px solid #78e570;
+  cursor: default;
 }
 
 .hovered {

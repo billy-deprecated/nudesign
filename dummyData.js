@@ -13,7 +13,7 @@ var OVERALL_GRADES = {Art: 100,
 
 var INDIVIDUAL_SUBJECT_GRADES = {Math: MATH_GRADES};
 
-var POSTS = [POST_MARCH_4, AGENDA_MARCH_4, POST_MARCH_3, AGENDA_MARCH_3, AGENDA_MARCH_2,  AGENDA_MARCH_1];
+var POSTS = [POST_MARCH_6, AGENDA_MARCH_6, POST_MARCH_3, AGENDA_MARCH_3, AGENDA_MARCH_2,  AGENDA_MARCH_1];
 
 
 // Individual posts:
@@ -29,15 +29,15 @@ var AGENDA_MARCH_3 = {text: "Good morning parents! The daily agenda is \n-Math: 
                       date: "March 3rd, 2017",
                       time: "7:50AM"};
 
-var POST_MARCH_3 = {text: "Reminder that the kids will have a fractions adding and subtracting quiz tomorrow! Included with tonight's homework are some worksheets for extra practice",
+var POST_MARCH_3 = {text: "Reminder that the kids will have a fractions adding and subtracting quiz on Monday! Included with this weekend's homework are some worksheets for extra practice",
                     date: "March 3rd, 2017",
                     time: "3:59PM"};
 
-var AGENDA_MARCH_4 = {text: "Hello parents! Our agenda for today is \n-Math: Adding and subtracting Fractions quiz. And review for the multiplying/dividing quiz tomorrow \n-Science: Rock candy lab! The kids will take home the candy with them. \n-Reading: We will go over a new set of vocabulary, please review and use these words at home",
+var AGENDA_MARCH_6 = {text: "Hello parents! Our agenda for today is \n-Math: Adding and subtracting Fractions quiz. And review for the multiplying/dividing quiz tomorrow \n-Science: Rock candy lab! The kids will take home the candy with them. \n-Reading: We will go over a new set of vocabulary, please review and use these words at home",
                       date: "March 6th, 2017",
                       time: "7:45AM"};
 
-var POST_MARCH_4 = {text: "Hope the students are enjoying the rock candy! This message is let you all I know I input the grades for today's fractions quiz. \nPlease find them in the Grades section, let me know if you have any questions about your child's performance",
+var POST_MARCH_6 = {text: "Hope the students are enjoying the rock candy! This message is let you all I know I input the grades for today's fractions quiz. \nPlease find them in the Grades section, let me know if you have any questions about your child's performance",
                     date: "March 6th, 2017",
                     time: "4:21PM"};
 

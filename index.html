@@ -52,9 +52,23 @@ $(document).on('click', '.menuItem', function(evt){
   // TODO: reload to new respective view
   var newMode = $(this).attr('id');
   $('#mode-panel').html(templates[newMode]);
+  if (newMode === 'messages') {
+    populateMessages();
+  }
 });
 
-$(document)
+$(document).ready(function() {
+  $("#messages").click();
+});
+
+function populateMessages(){
+  var list = $("#messages-list");
+  list.append("<div class='message'> <div class='received message-bubble' id='message-1'> Hi, How are you?</div></div>");
+  list.append("<div class='message'> <div class='received message-bubble' id='message-2'> I posted grades for last week's quiz. You should go over it with Robby, he struggled.</div></div>");
+  list.append("<div class='message'> <div class='sent message-bubble' id='message-3'> Thanks for letting me know! I'll get right on that since he can't add to save his life.</div></div>");
+  list.append("<div class='message'> <div class='received message-bubble' id='message-4'>Great, thanks fam.</div></div>");
+  list.append("<div class='message'> <div class='sent message-bubble' id='message-5'>gochu bruh</div></div>");
+}
 
 </script>
 

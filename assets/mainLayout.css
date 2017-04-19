@@ -144,4 +144,39 @@
   float: right;
 }
 
+table {
+  margin:100px;
+  width: 50%;
+}
+
+th {
+  height:100px;
+  width: 100px;
+  text-align: center;
+  text-decoration: underline;
+} 
+
+td {
+  text-align:center;
+}
+
+#leftBar {
+  width:50%;
+  height:100vh;
+  float:left;
+}
+
+#rightBar {
+  float:left;
+  width:50%;
+  height:100vh;
+  float:right;
+  text-align:center;
+  vertical-align:middle;
+}
+
+#wrapper {
+  display:flex;
+}
+
 

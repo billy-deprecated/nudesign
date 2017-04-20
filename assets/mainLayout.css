@@ -94,6 +94,7 @@
   font-size: 60px;
   height: 12%;
   border-bottom: 1px solid black;
+  z-index: 1;
 }
 
 #messages-container {
@@ -149,17 +150,72 @@
   border-bottom: 1px solid black;
 }
 
+#messaging-profile-pic {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  background-image: url("../graphics/new-user.png");
+  background-size: contain;
+}
+
+.contact-info {
+  font-size: 20px
+  width: 100%;
+  text-align: center;
+}
+
+.contact-name {
+  font-size: 30px
+}
+
 #attachments-list {
   height: 50%;
   width: 100%;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.attachment-row {
+  margin: 10px;
 }
 
 .attachment {
-  height: 50px;
-  width: 50px;
   border-radius: 5px;
-  margin: 5px 0 0 5px;
+  margin: 5px 5px 0px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.attachment:hover {
+  opacity: 0.5;
+}
+
+.attachment-pic {
+  height: 130px;
+  width: 130px;
+  border-radius: 5px;
   border: 1px solid black;
+  background-size: contain;
+}
+
+.attachment-label {
+  max-width: 130px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+
+.word {
+  background-image: url("../graphics/word.png");
+}
+
+.ppt {
+  background-image: url("../graphics/powerpoint.png");
+}
+
+.excel {
+  background-image: url("../graphics/excel.png");
 }
 
 .message-bubble {

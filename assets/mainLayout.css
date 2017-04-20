@@ -211,18 +211,6 @@ table {
   width: 50%;
 }
 
-<<<<<<< HEAD
-th {
-  height:100px;
-  width: 100px;
-  text-align: center;
-  text-decoration: underline;
-}
-
-td {
-  text-align:center;
-  padding: 10px 0;
-
 td, th {
     border: 1px solid #dddddd;
     text-align: left;

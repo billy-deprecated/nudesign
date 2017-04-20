@@ -209,10 +209,9 @@
 table {
   margin: 100px;
   width: 50%;
-
-
 }
 
+<<<<<<< HEAD
 th {
   height:100px;
   width: 100px;
@@ -223,6 +222,11 @@ th {
 td {
   text-align:center;
   padding: 10px 0;
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
 
 #leftBar {
@@ -244,19 +248,10 @@ td {
   display:flex;
 }
 
-.divider {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    bottom: 10%;
-    border-left: 1px solid black;
-    height: 100vh;
-}
-
 #gradetablecaption {
   position: absolute;
-  top: 350px;
-  left: 450px;
+  top: 250px;
+  left: 250px;
   font-size: 30pt;
 }
 
@@ -269,29 +264,28 @@ td {
 
 #dropdown {
   position: absolute;
-  top: 360px;
-  left: 1000px;
+  top: 260px;
+  left: 1650px;
   font-size: 20pt;
 }
 
 #assignments {
   position: absolute;
-  top: 350px;
-  left: 1350px;
+  top: 250px;
+  left: 1100px;
   font-size: 30pt;
 }
 
 #subjecttable {
   position: absolute;
-  top: 350px;
-  left: 350px;
+  top: 250px;
+  left: 150px;
   font-size: 15px;
+  width: 70%;
 }
 
 #overall {
   font-size: 25pt;
-  border-collapse: separate;
-  border-spacing: 10px 0;
 }
 
 #table {
@@ -302,8 +296,9 @@ td {
   position: absolute;
   border-spacing: 10px 0;
   border-collapse: separate;
-  top: 350px;
-  left: 1210px;
+  width: 70%;
+  top: 250px;
+  left: 1000px;
 }
 
 tr:nth-child(even) {

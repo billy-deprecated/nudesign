@@ -190,4 +190,52 @@ td {
   display:flex;
 }
 
+.divider {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    bottom: 10%;
+    border-left: 1px solid black;
+    height: 100vh;
+}
+
+#gradetablecaption {
+  position: absolute;
+  top: 350px;
+  left: 450px;
+  font-size: 30pt;
+}
+
+#robby {
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  font-size: 30pt;
+}
+
+#dropdown {
+  position: absolute;
+  top: 360px;
+  left: 1000px;
+  font-size: 20pt;
+}
+
+#assignments {
+  position: absolute;
+  top: 350px;
+  left: 1350px;
+  font-size: 30pt;
+}
+
+#table {
+  position: absolute;
+  top: 350px;
+  left: 350px;
+  font-size: 15px;
+}
+
+#overall {
+  font-size: 25pt;
+}
+
 

@@ -1,0 +1,144 @@
+#agenda-list{
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  overflow-y: scroll;
+}
+#container{
+}
+.agenda {
+  margin-top: 2em;
+  position:relative;
+}
+
+.agenda .avatar {
+  width:10%;
+  height:7em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.spacer {
+  clear:right;
+}
+.agenda .poster {
+  margin-left: 5%;
+}
+
+.avatar-pic {
+  width: 50%;
+  height: 50%;
+}
+
+.info {
+  width:70%;
+  display: inline-block;
+}
+
+.content {
+  border-width:2%;
+  border-style: solid;
+}
+
+.date {
+  float:right;
+  padding-top: 1%;
+  padding-right: 1%;
+  height:1em;
+}
+
+.daily {
+  margin-left: 2%;
+  width:98%;
+  padding-bottom:1%;
+}
+
+.indent{
+  margin-left: 2%;
+  width: 98%;
+}
+
+.primary p{
+  font-size: 2em;
+  margin-bottom: 0em;
+}
+
+.secondary p {
+  font-size: 1.5em;
+  margin-bottom: 0em;
+}
+
+.tertiary p{
+  font-size: 1.125em;
+  margin-bottom: 0em;
+}
+
+.header  {
+}
+
+.action {
+}
+
+.seperator {
+  height:1px;
+  border-bottom:.1em solid #313030;
+}
+
+.comment-controls {
+  margin-top: .2em;
+  width:50%;
+  margin-left: 25%;
+  margin-right:25%;
+  margin-bottom: .2em;
+}
+
+.comment-controls button{
+  width:45%;
+  font-size:.7em;
+}
+
+#public-comment {
+  padding-right: 2.5%;
+}
+
+#private-comment {
+  padding-left: 2.5%;
+}
+.comments {
+  padding:.5em;
+}
+.comment-header {
+  font-size: 1.5em;
+  margin-bottom: 0px;
+}
+.entry {
+  padding-top:1em;
+  padding-bottom:1em;
+  border: .1em solid;
+}
+.comments .avatar {
+  margin-left: 1%;
+  width:5%;
+  height:2em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.comments .poster {
+  margin-left: 0%;
+  color:blue;
+}
+
+.comment {
+  width:87%;
+  display: inline-block;
+  margin-left: .5%;
+  vertical-align: top;
+}
+.detail{
+
+}
+.comments .avatar-pic {
+  width: 100%;
+  height: 100%;
+}

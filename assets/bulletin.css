@@ -44,7 +44,9 @@
 
 .content {
   border-width:2%;
-  border-style: solid;
+  border: 2px solid darkgreen;
+  border-radius: 20px;
+  background-color: #f7fbfc;
 }
 
 .date {
@@ -105,12 +107,16 @@
 #public-comment {
   float:left;
   margin-left:2%;
+  background-color: #f9f68e;
+  color: black;
+  border-color: gray;
 }
 
 #private-comment {
   float:right;
   margin-right:2%;
-  background-color: black;
+  background-color: #ad17d3;
+  border-color: purple;
 }
 .comments {
   padding:.5em;
@@ -122,7 +128,8 @@
 .entry {
   padding-top:1em;
   padding-bottom:1em;
-  border: .1em solid;
+  border-radius: 10px;
+  background-color: #e8e8e8;
 }
 .comments .avatar {
   margin-left: 1%;

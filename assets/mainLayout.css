@@ -5,7 +5,7 @@
   width: 180px;
   position: fixed;
   border-right: 1px solid gray;
-  background-color: #d9e1e2;
+  background-color: #02344b;
 }
 #mainWindow {
   margin-left: 180px;
@@ -39,19 +39,21 @@
   width: 100%;
   border-bottom: 2px solid black;
   height: 10%;
+  background-color: #0478ae;
 }
 
 .welcome-message {
-  padding: 5px 0 0 20px;
+  padding: 0 0 0 20px;
   width: 300px;
   display: inline-block;
   font-size: 60px;
+  color: white;
 }
 
 #logo {
   margin-top: 10px;
   margin-left: 20px;
-  color: blue;
+  color: white;
   font-size: 40px;
   font-style: italic;
   font-family: 'Raleway', sans-serif;
@@ -75,16 +77,17 @@
   font-family: 'Alegreya Sans', sans-serif;
   padding: 20px;
   cursor: pointer;
+  color: white;
 }
 
 .selectedMenuItem {
-  color: white;
   background-color: #0ca001;
   cursor: default;
 }
 
 .hovered {
   background-color: #e3edef;
+  color: black;
 }
 
 .section-title {

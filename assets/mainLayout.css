@@ -203,3 +203,108 @@
   float: right;
   border-radius: 20px 5px 20px 20px;
 }
+
+table {
+  margin: 100px;
+  width: 50%;
+
+
+}
+
+th {
+  height:100px;
+  width: 100px;
+  text-align: center;
+  text-decoration: underline;
+
+} 
+
+td {
+  text-align:center;
+  padding: 10px 0;
+}
+
+#leftBar {
+  width:50%;
+  height:100vh;
+  float:left;
+}
+
+#rightBar {
+  float:left;
+  width: 50%;
+  height: 100vh;
+  float:right;
+  text-align:center;
+  vertical-align:middle;
+}
+
+#wrapper {
+  display:flex;
+}
+
+.divider {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    bottom: 10%;
+    border-left: 1px solid black;
+    height: 100vh;
+}
+
+#gradetablecaption {
+  position: absolute;
+  top: 350px;
+  left: 450px;
+  font-size: 30pt;
+}
+
+#robby {
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  font-size: 30pt;
+}
+
+#dropdown {
+  position: absolute;
+  top: 360px;
+  left: 1000px;
+  font-size: 20pt;
+}
+
+#assignments {
+  position: absolute;
+  top: 350px;
+  left: 1350px;
+  font-size: 30pt;
+}
+
+#subjecttable {
+  position: absolute;
+  top: 350px;
+  left: 350px;
+  font-size: 15px;
+}
+
+#overall {
+  font-size: 25pt;
+  border-collapse: separate;
+  border-spacing: 10px 0;
+}
+
+#table {
+  font-size: 15pt;
+}
+
+#assignmentstable {
+  position: absolute;
+  border-spacing: 10px 0;
+  border-collapse: separate;
+  top: 350px;
+  left: 1210px;
+}
+
+tr:nth-child(even) {
+    background-color: #e3edef;
+}

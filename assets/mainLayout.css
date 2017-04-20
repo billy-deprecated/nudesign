@@ -91,7 +91,7 @@
 }
 
 .section-title {
-  padding: 10px 0px 0px 30px;
+  padding: 5px 0px 0px 30px;
   width: 100%;
   display: inline-block;
   font-size: 60px;
@@ -232,6 +232,8 @@
 
 .message-time {
   font-size: 15px;
+  text-align: right;
+  font-style: italic;
 }
 
 .message {
@@ -265,11 +267,6 @@
   border-radius: 20px 5px 20px 20px;
 }
 
-table {
-  margin: 100px;
-  width: 50%;
-}
-
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
@@ -278,74 +275,74 @@ td, th {
 
 #leftBar {
   width:50%;
-  height:100vh;
-  float:left;
+  height:100%;
+  display: inline-block;
+  position: relative;
+  border-right: 1px solid black;
 }
 
 #rightBar {
-  float:left;
   width: 50%;
-  height: 100vh;
-  float:right;
+  height: 100%;
+  padding: 30px 100px 30px;
+  display: inline-block;
+  float: right;
   text-align:center;
   vertical-align:middle;
+  position: relative;
+  overflow-y: scroll;
 }
 
-#wrapper {
-  display:flex;
+#grades-container {
+  height: 88%;
+  width: 100%;
+  overflow: hidden;
 }
 
 #gradetablecaption {
-  position: absolute;
-  top: 250px;
-  left: 250px;
+  margin: 50px 0 0 80px;
   font-size: 30pt;
 }
 
 #robby {
   position: absolute;
-  top: 150px;
-  left: 250px;
+  top: 30px;
+  left: 50px;
   font-size: 30pt;
 }
 
 #dropdown {
-  position: absolute;
-  top: 260px;
-  left: 1650px;
+  float: right;
   font-size: 20pt;
+  margin-top: 11px;
 }
 
 #assignments {
-  position: absolute;
-  top: 250px;
-  left: 1100px;
+  float: left;
   font-size: 30pt;
 }
 
 #subjecttable {
-  position: absolute;
-  top: 250px;
-  left: 150px;
+  padding: 30px 0 0 80px;
   font-size: 15px;
-  width: 70%;
+  width: 100%;
 }
 
 #overall {
   font-size: 25pt;
+  width: 80%
 }
 
 #table {
   font-size: 15pt;
+  width: 100%;
 }
 
 #assignmentstable {
-  position: absolute;
   border-spacing: 10px 0;
   border-collapse: separate;
-  width: 70%;
-  top: 250px;
-  left: 1000px;
+  width: 100%;
+  margin-top: 90px;
 }
 
 tr:nth-child(even) {

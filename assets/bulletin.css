@@ -48,7 +48,9 @@
   border-radius: 20px;
   background-color: #f7fbfc;
 }
-
+.reminder {
+  color: #d9534f;
+}
 .date p{
   float:right;
   padding-top: 1%;

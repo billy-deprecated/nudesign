@@ -89,11 +89,11 @@
 
 .section-title {
   padding: 10px 0px 0px 30px;
-  width: 80%;
+  width: 100%;
   display: inline-block;
   font-size: 60px;
-  border-right: 1px solid black;
   height: 12%;
+  border-bottom: 1px solid black;
 }
 
 #messages-container {
@@ -101,19 +101,35 @@
   width: 80%;
   border: 1px solid black;
   border-left: none;
+  border-top: none;
+  overflow: hidden;
 }
 
 #messages-list {
-  padding: 20px;
+  padding: 40px;
   height: 90%;
   width: 100%;
   border-bottom: none;
   overflow-y: scroll;
 }
 #messages-input {
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+}
+#send-message-button {
+  height: 80%;
+  width: 15%;
+  margin-left: 25px;
+  font-size: 30px;
+}
+
+#messages-input-container {
   width: 100%;
   height: 10%;
-  padding: 30px;
+  padding: 5px;
   border: none;
   border-top: 1px solid black;
 }
@@ -121,16 +137,21 @@
 .message-bubble {
   display: block;
   border: solid 1px blue;
-  border-radius: 5px;
-  width: 300px;
+  max-width: 600px;
   padding: 25px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.message-time {
+  font-size: 15px;
 }
 
 .message {
   display: block;
-  margin: 10px;
   width: 100%;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .message::before, .message::after {
@@ -146,6 +167,7 @@
   background-color: light-gray;
   color: black;
   float: left;
+  border-radius: 5px 20px 20px 20px;
 }
 
 .sent {
@@ -153,6 +175,7 @@
   border-color: blue;
   color: white;
   float: right;
+  border-radius: 20px 5px 20px 20px;
 }
 
 

@@ -10,6 +10,7 @@
 <link rel='stylesheet' href=
   'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css'>
 <link rel='stylesheet' href='assets/mainLayout.css'>
+<link rel='stylesheet' href='assets/bulletin.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway'>
 <link href="assets/flag-icon-css-master/assets/docs.css" rel="stylesheet">
   <link href="assets/flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
@@ -20,6 +21,8 @@
 <script>
 
 var MENU_ITEMS = ['#bulletin', '#grades', '#messages'];
+
+var TEMPLATES = {'bulletin':'#bulletin_template', 'grades':'#grades_template', 'messages':'#messages_template'}
 
 // mouse hover over or away from side menu option
 $(document).on({
@@ -51,7 +54,7 @@ $(document).on('click', '.menuItem', function(evt){
 
   // TODO: reload to new respective view
   var newMode = $(this).attr('id');
-  $('#mode-panel').html(templates[newMode]);
+  $('#mode-panel').html($(TEMPLATES[newMode]).html());
   if (newMode === 'messages') {
     populateMessages();
   }
@@ -63,6 +66,7 @@ $(document).ready(function() {
 
 function populateMessages(){
   var list = $("#messages-list");
+  console.log(list);
   list.append("<div class='message'> <div class='received message-bubble' id='message-1'> Hi, How are you?</div></div>");
   list.append("<div class='message'> <div class='received message-bubble' id='message-2'> I posted grades for last week's quiz. You should go over it with Robby, he struggled.</div></div>");
   list.append("<div class='message'> <div class='sent message-bubble' id='message-3'> Thanks for letting me know! I'll get right on that since he can't add to save his life.</div></div>");
@@ -98,10 +102,101 @@ function populateMessages(){
         <div id="language-icon"><span class="flag-icon flag-icon-us"></div>
         <button class="btn btn-success" type="button" id="language-button">English</button>
       </div>
-      
+
     </div>
     <div id="mode-panel">
     </div>
   </div>
 </body>
 </html>
+
+<!--Messages Template -->
+<div id="messages_template" style="visibility:hidden">
+<div class='section-title'>Messages</div>
+<div id='messages-container'>
+  <div id='messages-list'>
+  </div>
+  <input type='text' id='messages-input'/>
+</div>
+</div>
+
+<!--Bulletin Template -->
+<div id="bulletin_template" style="visibility:hidden">
+  <div id= "container">
+    <div class='section-title'> Bulletin </div>
+    <div id="agenda-list">
+
+      <div class= "agenda">
+
+        <div class = "avatar">
+            <div class="poster"> Ms.Laura </div>
+            <img class="avatar-pic" src="graphics/new-user.png">
+        </div>
+
+        <div class= "info">
+          <div class="content">
+
+            <div class = "date">
+              <p>4/5/17</p>
+               <div class="spacer"></div>
+            </div>
+
+            <div class="daily spacer">
+              <div class = "primary">
+               <div class="header">
+                 <p>Daily Agenda </p>
+               </div>
+               <div class = "indent">
+                 <div class = "secondary">
+                   <div class="header">
+                     <p>Multiplying Fractions </p>
+                   </div>
+                   <div class = "indent">
+                     <div class = "tertiary">
+                       <div class="action">
+                         <p>Learned concept that you mutliply numerator and denominator
+                         seperately</p>
+                       </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+        </div>
+        <div class="seperator">
+        </div>
+        <div class="comment-controls">
+          <span>
+            <button id="public-comment">
+              Public Comment
+            </button>
+            <button id="private-comment">
+              Private Comment
+            </button>
+          </span>
+        </div>
+        <div class="seperator">
+        </div>
+        <div class="comments">
+          <p class="comment-header"> Comments </p>
+          <div class="entry">
+            <div class = "avatar">
+                <img class="avatar-pic" src="graphics/new-user.png">
+            </div>
+            <div class= "comment">
+              <span class="poster"> Ms.Laura </span>
+              <span class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type and scrambled it to make a type specimen book. It has survived not only five centuries, b
+                        ut also the leap into electronic typesetting, remaining essentially unchanged.
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>

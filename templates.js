@@ -1,5 +1,5 @@
 var templates = {
-	bulletin: "<div>This is where the bulletin will go</div",
+	bulletin: "<div> This is where bulletin will be </div>",
 
 	grades: 
 "<div id='wrapper'>" +
@@ -44,7 +44,7 @@ var templates = {
     "</div>" +
 "</div>",
 
-	messages: 
+	messages:
 "<div class='section-title'>Messages " +
 "</div>"+
 "<div id='messages-container'>"+

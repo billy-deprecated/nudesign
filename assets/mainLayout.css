@@ -80,13 +80,11 @@
 .selectedMenuItem {
   color: white;
   background-color: #0ca001;
-  border-right: 5px solid #78e570;
   cursor: default;
 }
 
 .hovered {
   background-color: #e3edef;
-  border-right: 5px solid blue;
 }
 
 .section-title {
@@ -179,5 +177,3 @@
   float: right;
   border-radius: 20px 5px 20px 20px;
 }
-
-

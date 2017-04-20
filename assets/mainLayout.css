@@ -156,8 +156,9 @@
 }
 
 table {
-  margin:100px;
+  margin: 100px;
   width: 50%;
+
 }
 
 th {
@@ -165,6 +166,7 @@ th {
   width: 100px;
   text-align: center;
   text-decoration: underline;
+
 } 
 
 td {
@@ -227,7 +229,7 @@ td {
   font-size: 30pt;
 }
 
-#table {
+#subjecttable {
   position: absolute;
   top: 350px;
   left: 350px;
@@ -236,6 +238,16 @@ td {
 
 #overall {
   font-size: 25pt;
+}
+
+#table {
+  font-size: 15pt;
+}
+
+#assignmentstable {
+  position: absolute;
+  top: 350px;
+  left: 1210px;
 }
 
 

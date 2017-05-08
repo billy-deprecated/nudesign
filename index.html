@@ -29,12 +29,12 @@ $(document).on({
   // when mouse hovers a menu item that's not currently selected
   mouseenter: function(){
       if(!$(this).hasClass('selectedMenuItem')){
-        $(this).addClass('hovered');
+        $(this).addClass('hoveredMenuItem');
       }
   },
   // remove hovered class after mouse leaves
   mouseleave: function(){
-      $(this).removeClass('hovered');
+      $(this).removeClass('hoveredMenuItem');
   }
 }, '.menuItem');
 

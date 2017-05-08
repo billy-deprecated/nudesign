@@ -1,19 +1,18 @@
 <!--Nu Designs 6.813 project: inclass, Grades page-->
 <!DOCTYPE html>
-<style>
+<script>
 $(document).on({
-  // when mouse hovers a menu item that's not currently selected
+  // when mouse hovers a grade item
   mouseenter: function(){
-      if(!$(this).hasClass('selectedMenuItem')){
-        $(this).addClass('hoveredMenuItem');
-      }
+      $(this).addClass('hoveredGrade');
   },
   // remove hovered class after mouse leaves
   mouseleave: function(){
-      $(this).removeClass('hoveredMenuItem');
+      $(this).removeClass('hoveredGrade');
   }
-}, '.menuItem');
-</style>
+}, '#leftbar');
+</script>
+
 <div class='section-title'>Robby's Grades</div>
 <div id='grades-container'>
     <div id='leftBar'>

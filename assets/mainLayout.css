@@ -116,20 +116,40 @@
   border-bottom: none;
   overflow-y: scroll;
 }
+
+.send-attachment {
+  height: 4em;
+  background-size: contain;
+  width: 4em;
+  display: inline-block;
+  background-image: url(../graphics/paper-clip-2-xxl.png);
+  cursor: pointer;
+}
+
+.send-attachment::hover {
+  opacity: .5;
+}
+
 #messages-input {
-  width: 80%;
-  height: 100%;
+  width: 70%;
+  height: 3em;
   padding: 10px;
-  border: none;
+  border: 1px solid gray;
+  display: inline-block;
   font-size: 20px;
+  top: -1.2em;
+  position: relative;
 }
 #send-message-button {
-  height: 80%;
+  height: 1.8em;
   width: 15%;
   margin-left: 25px;
   font-size: 30px;
   border-color: green;
   background-color: darkgreen;
+  position: relative;
+  top: -.9em;
+  cursor: pointer;
 }
 
 #messages-input-container {

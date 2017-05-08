@@ -4,13 +4,15 @@
 $(document).on({
   // when mouse hovers a grade item
   mouseenter: function(){
-      $(this).addClass('hoveredGrade');
+    console.log("Hovered over td")
+    console.log(this)
+    $(this).addClass('hoveredGrade');
   },
   // remove hovered class after mouse leaves
   mouseleave: function(){
-      $(this).removeClass('hoveredGrade');
+    $(this).removeClass('hoveredGrade');
   }
-}, '#leftbar');
+}, '.td');
 </script>
 
 <div class='section-title'>Robby's Grades</div>

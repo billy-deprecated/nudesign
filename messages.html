@@ -1,7 +1,22 @@
 <!--Nu Designs 6.813 project: inclass, Messages page-->
 <!--Messages Template -->
 <!DOCTYPE html>
-<div class='section-title'>Messages</div>
+
+<div id="mainWindow">
+  <div id="top-bar">
+    <div class="welcome-message"> Messages</div>
+    <button class="btn btn-danger" type="button" id="logout-button">Logout</button>
+    <div id="language-group">
+      <div id="language-icon"><span class="flag-icon flag-icon-us"></div>
+      <button class="btn btn-success" type="button" id="language-button">English</button>
+    </div>
+
+  </div>
+  <div id="mode-panel">
+  </div>
+</div>
+
+<!-- <div class='section-title'>Messages</div> -->
 <div id='messages-container'>
   <div id='messages-attachments-pane'>
   	<div id='messaging-contact'>
@@ -52,7 +67,7 @@
   	<input type='text' id='messages-input'/>
   	<button class="btn btn-primary" type="button" id="send-message-button">Send</button>
   </div>
-  
+
 </div>
 <script type="text/javascript">
 	var messageId = 5;

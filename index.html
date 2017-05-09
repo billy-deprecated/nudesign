@@ -65,6 +65,19 @@ $(document).ready(function() {
   $("#bulletin").click();
 });
 
+$(document).on({
+  // when mouse hovers a grade item
+  mouseenter: function(){
+    console.log("Hovered over td")
+    console.log(this)
+    $(this).addClass('hoveredGrade');
+  },
+  // remove hovered class after mouse leaves
+  mouseleave: function(){
+    $(this).removeClass('hoveredGrade');
+  }
+}, '.subject');
+
 function populateMessages(){
   var list = $("#messages-list");
   list.append("<div class='message'> <div class='received message-bubble' id='message-1'> <div class='message-time'>25 March, 2017</div>Hi, How are you?</div></div>");

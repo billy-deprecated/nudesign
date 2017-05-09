@@ -1,19 +1,5 @@
 <!--Nu Designs 6.813 project: inclass, Grades page-->
 <!DOCTYPE html>
-<script>
-$(document).on({
-  // when mouse hovers a grade item
-  mouseenter: function(){
-    console.log("Hovered over td")
-    console.log(this)
-    $(this).addClass('hoveredGrade');
-  },
-  // remove hovered class after mouse leaves
-  mouseleave: function(){
-    $(this).removeClass('hoveredGrade');
-  }
-}, '.td');
-</script>
 
 <div class='section-title'>Robby's Grades</div>
 <div id='grades-container'>
@@ -27,22 +13,22 @@ $(document).on({
       </tr>
 
       <tr>
-      <td id='math'>Math</td>
+      <td class='subject' id='math'>Math</td>
       <td>90%</td>
       </tr>
 
       <tr>
-      <td id='reading'>Reading</td>
+      <td class='subject' id='reading'>Reading</td>
       <td>80%</td>
       </tr>
 
       <tr>
-      <td id='science'>Science</td>
+      <td class='subject' id='science'>Science</td>
       <td>100%</td>
       </tr>
 
       <tr>
-      <td id='art'>Art</td>
+      <td class='subject' id='art'>Art</td>
       <td>75%</td>
       </tr>
 

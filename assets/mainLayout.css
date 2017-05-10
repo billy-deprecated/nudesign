@@ -4,8 +4,7 @@
   height: 100%;
   width: 180px;
   position: fixed;
-  border-right: 1px solid gray;
-  background-color: #02344b;
+  background-color: #222e35;
 }
 #mainWindow {
   margin-left: 180px;
@@ -33,20 +32,24 @@
   display: block;
   margin-right: 30px;
   margin-top: 30px;
+  height:40px;
 }
 
 #top-bar {
   width: 100%;
-  border-bottom: 2px solid black;
   height: 10%;
   background-color: #0478ae;
+  min-height: 82px;
+  min-width: 934px;
 }
 
 .welcome-message {
+  font-family: 'Raleway', sans-serif;
   padding: 0 0 0 20px;
   width: 300px;
   display: inline-block;
   font-size: 60px;
+  white-space: nowrap;
   color: white;
 }
 
@@ -82,6 +85,7 @@
 
 .selectedMenuItem {
   background-color: #0ca001;
+  font-style: italic;
   cursor: default;
 }
 
@@ -96,8 +100,18 @@
   display: inline-block;
   font-size: 60px;
   height: 12%;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid lightgray;
   z-index: 1;
+}
+
+.section-title-bulletin {
+  padding: 5px 0px 0px 30px;
+  width: 100%;
+  display: inline-block;
+  font-size: 60px;
+  height: 12%;
+  z-index: 1;
+
 }
 
 #messages-container {
@@ -211,7 +225,7 @@
 #messaging-contact {
   height: 50%;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gray;
 }
 
 #messaging-profile-pic {
@@ -344,12 +358,12 @@ td, th {
 }
 
 .hoveredGrade {
-  background-color: #64ff64;
-  color: #807e7e;
+  background-color: #0478ae;
+  color: white;
 }
 
 .selectedGrade {
-  background-color: #0478ae;
+  background-color: #0ca001;
   color: white;
   font-style: italic;
 }
@@ -359,13 +373,13 @@ td, th {
   height:100%;
   display: inline-block;
   position: relative;
-  border-right: 1px solid black;
+  border-right: 1px solid lightgray;
 }
 
 #rightBar {
   width: 50%;
   height: 100%;
-  padding: 30px 100px 30px;
+  padding: 0px 100px 30px;
   display: inline-block;
   float: right;
   text-align:center;
@@ -377,6 +391,8 @@ td, th {
 #grades-container {
   height: 88%;
   width: 100%;
+  min-width: 934px;
+  min-width: 934px;
   overflow: hidden;
 }
 
@@ -401,6 +417,8 @@ td, th {
 #assignments {
   float: left;
   font-size: 30pt;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 #subjecttable {

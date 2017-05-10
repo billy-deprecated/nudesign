@@ -5,24 +5,27 @@
 <head>
 <meta charset='utf-8'>
 <title>inclass</title>
-
-<!-- Load style sheets -->
-<link rel='stylesheet' href=
-  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css'>
-<link rel='stylesheet' href='assets/mainLayout.css'>
-<link rel='stylesheet' href='assets/bulletin.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway'>
-<link href="assets/flag-icon-css-master/assets/docs.css" rel="stylesheet">
-  <link href="assets/flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
 <script src=
   'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='templates.js'></script>
+<!-- Load style sheets -->
+<link rel='stylesheet' href=
+  'bootstrap-3.3.7-dist/css/bootstrap.min.css'>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway'>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="assets/mainLayout.css">
+<link rel='stylesheet' href='assets/bulletin.css'>
+<link href="assets/flag-icon-css-master/assets/docs.css" rel="stylesheet">
+  <link href="assets/flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
 
+<script src='templates.js'></script>
+<script src="comment.js"></script>
+<script src="bulletinloader.js"></script>
 <script>
 
 var MENU_ITEMS = ['#bulletin', '#grades', '#messages'];
 
-var SUBJECTS = ['#Math', '#Reading', '#Science', '#Art'];
+var SUBJECTS = ['#Math', '#Reading', '#Science', '#Art']
 
 var TEMPLATES = {'bulletin':'#bulletin_template', 'grades':'#grades_template', 'messages':'#messages_template'}
 
@@ -59,9 +62,12 @@ $(document).on('click', '.menuItem', function(evt){
   $('#mode-panel').load("./"+newMode+".html", function(){
     if (newMode === 'messages') {
       populateMessages();
+    } else if (newMode == "bulletin"){
+      bootstrap();
     }
   });
 });
+
 
 $(document).ready(function() {
   $("#bulletin").click();
@@ -80,20 +86,21 @@ $(document).on({
 
 // side menu option clicked
 $(document).on('click', '.subject', function(evt){
-  console.log("this:", $(this));
-  // if this item is already selected, do nothing
+  // if this subject is already selected, do nothing
   if($(this).hasClass('selectedGrade')){
     return;
   }
+
   var currentSubject;
   var newSubject;
-  // unselect the current selected grade
+  // unselect the current selected subject
   for(var i in SUBJECTS){
     if($(SUBJECTS[i]).hasClass('selectedGrade')){
       $(SUBJECTS[i]).removeClass('selectedGrade');
       currentSubject = SUBJECTS[i].slice(1);
     }
   }
+  // remove hovered class and add selected class to new subject
   for(var i in SUBJECTS){
     if($(SUBJECTS[i]).hasClass('hoveredGrade')){
       $(SUBJECTS[i]).removeClass('hoveredGrade');
@@ -101,15 +108,7 @@ $(document).on('click', '.subject', function(evt){
       newSubject = SUBJECTS[i].slice(1);
     }
   }
-  console.log("currentSubject: ", currentSubject);
-  // select the new one
-  // $(this).removeClass('hoveredGrade');
-  // $(this).addClass('selectedGrade');
-
-  // var newSubject = "Art"//$(this).get(0).id;
-  console.log("newSubject: ", newSubject);
   var newTable=$("#assignmentstable").html().replace(new RegExp(currentSubject, 'g'), newSubject);
-  console.log("newTable: ", newTable);
   $("#table").replaceWith(newTable);
 });
 
@@ -129,7 +128,7 @@ function populateMessages(){
 <body>
   <div id="sideMenu">
     <div id="logo"> inclass </div>
-    <img id="menuPic" src="graphics/new-user.png">
+    <img id="menuPic" src="graphics/ruby.png">
     <div id="menuItems">
       <div class="menuItem" id ="bulletin">
         Bulletin
@@ -144,7 +143,6 @@ function populateMessages(){
   </div>
   <div id="mainWindow">
     <div id="top-bar">
-      <div class="welcome-message"> Hi Ruby!</div>
       <button class="btn btn-danger" type="button" id="logout-button">Logout</button>
       <div id="language-group">
         <div id="language-icon"><span class="flag-icon flag-icon-us"></div>

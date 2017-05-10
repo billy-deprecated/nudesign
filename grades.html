@@ -1,7 +1,11 @@
 <!--Nu Designs 6.813 project: inclass, Grades page-->
 <!DOCTYPE html>
 
-<div class='section-title'>Robby's Grades</div>
+<script>
+$(".welcome-message").remove();
+$("#top-bar").append("<div class='welcome-message'>Robby's Grades</div>");
+</script>
+
 <div id='grades-container'>
     <div id='leftBar'>
       <div id='gradetablecaption'>Overall Grades</div>
@@ -13,7 +17,7 @@
       </tr>
 
       <tr>
-      <td class='subject' class='selectedGrade' id='Math'>Math</td>
+      <td class='subject selectedGrade' id='Math'>Math</td>
       <td>90%</td>
       </tr>
 

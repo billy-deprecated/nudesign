@@ -108,7 +108,7 @@ $(document).on('click', '.subject', function(evt){
 
   // var newSubject = "Art"//$(this).get(0).id;
   console.log("newSubject: ", newSubject);
-  var newTable=$("#assignmentstable").html().replace(new RegExp("Math", 'g'), "Art");
+  var newTable=$("#assignmentstable").html().replace(new RegExp(currentSubject, 'g'), newSubject);
   console.log("newTable: ", newTable);
   $("#table").replaceWith(newTable);
 });

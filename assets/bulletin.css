@@ -192,6 +192,7 @@ textarea {
   margin-left: 0%;
   color: green;
   font-weight: bold;
+  padding-left:1em;
 }
 
 .comment-container {
@@ -230,7 +231,6 @@ textarea {
 .comments .poster {
   margin-left:0%;
   font-size:1em;
-  padding-left: 0em;
 }
 
 .comment {

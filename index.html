@@ -86,6 +86,7 @@ $(document).on('click', '.subject', function(evt){
     return;
   }
   var currentSubject;
+  var newSubject;
   // unselect the current selected grade
   for(var i in SUBJECTS){
     if($(SUBJECTS[i]).hasClass('selectedGrade')){
@@ -93,12 +94,19 @@ $(document).on('click', '.subject', function(evt){
       currentSubject = SUBJECTS[i].slice(1);
     }
   }
+  for(var i in SUBJECTS){
+    if($(SUBJECTS[i]).hasClass('hoveredGrade')){
+      $(SUBJECTS[i]).removeClass('hoveredGrade');
+      $(SUBJECTS[i]).addClass('selectedGrade');
+      newSubject = SUBJECTS[i].slice(1);
+    }
+  }
   console.log("currentSubject: ", currentSubject);
   // select the new one
-  $(this).removeClass('hoveredGrade');
-  $(this).addClass('selectedGrade');
+  // $(this).removeClass('hoveredGrade');
+  // $(this).addClass('selectedGrade');
 
-  var newSubject = $(this).get(0).id;
+  // var newSubject = "Art"//$(this).get(0).id;
   console.log("newSubject: ", newSubject);
   var newTable=$("#assignmentstable").html().replace(new RegExp(currentSubject, 'g'), newSubject);
   console.log("newTable: ", newTable);

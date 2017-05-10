@@ -107,6 +107,7 @@
   border-left: none;
   border-top: none;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 #messages-list {
@@ -115,9 +116,16 @@
   width: 80%;
   border-bottom: none;
   overflow-y: scroll;
+  min-width: 40em;
+}
+
+#text-input-container {
+  display: inline-block;
+  min-width: 60em;
 }
 
 .send-attachment {
+  border: none;
   height: 3.8em;
   background-size: contain;
   width: 3.8em;
@@ -126,12 +134,45 @@
   cursor: pointer;
 }
 
+#attachment-preview {
+  display: inline-block;
+  height: 2.1em;
+  border-radius: 1em;
+  background-color: green; 
+  padding: 0.5em;
+}
+
+#attachment-preview-text {
+  display: inline-block;
+  font-size: 1em;
+  text-overflow: ellipsis;
+  max-width: 8em;
+  line-height: 1em;
+  height: 1em;
+  overflow: hidden;
+  white-space:nowrap;
+  color: white;
+}
+
 .send-attachment:hover {
   opacity: .5;
 }
 
+#clear-attachment {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  background-size: contain;
+  cursor: pointer;
+  background-image: url("../graphics/cancel.png");
+}
+
+#clear-attachment:hover {
+  opacity: 0.5;
+}
+
 #messages-input {
-  width: 70%;
+  width: 90%;
   height: 3em;
   padding: 10px;
   border: 1px solid gray;
@@ -141,7 +182,7 @@
 #send-message-button {
   height: 1.8em;
   width: 4em;
-  margin-left: 25px;
+  margin-left: 1em;
   font-size: 30px;
   border-color: green;
   background-color: darkgreen;
@@ -154,13 +195,17 @@
   padding: 5px;
   border: none;
   border-top: 1px solid black;
+  white-space: nowrap;
+  min-width: 40em;
 }
 
 #messages-attachments-pane {
   height: 100%;
-  width: 20%;
   float: right;
   border-left: 1px solid black;
+  max-width: 280px;
+  min-width: 140px;
+  width: 20%;
 }
 
 #messaging-contact {
@@ -200,7 +245,7 @@
 
 .attachment {
   border-radius: 5px;
-  margin: 5px 5px 0px;
+  margin: 10px 10px 0px;
   display: inline-block;
   cursor: pointer;
 }
@@ -237,6 +282,14 @@
   background-image: url("../graphics/excel.png");
 }
 
+.file {
+  background-image: url("../graphics/file.png");
+}
+
+.pdf {
+  background-image: url("../graphics/pdf.png");
+}
+
 .message-bubble {
   display: block;
   border: solid 1px blue;
@@ -244,6 +297,7 @@
   padding: 25px;
   padding-top: 10px;
   font-size: 20px;
+  white-space: normal;
 }
 
 .message-time {

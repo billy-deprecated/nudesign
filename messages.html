@@ -28,36 +28,6 @@
   		</div>
   	</div>
   	<div id='attachments-list'>
-  		<div class="attachment-row">
-	  		<div class="attachment">
-	  			<div class="attachment-pic word"></div>
-	  			<span class="attachment-label">Math Review 2/19</span>
-	  		</div>
-	  		<div class="attachment">
-	  			<div class="attachment-pic word"></div>
-	  			<span class="attachment-label">Fractions 2/8</span>
-	  		</div>
-  		</div>
-  		<div class="attachment-row">
-	  		<div class="attachment">
-	  			<div class="attachment-pic word"></div>
-	  			<span class="attachment-label">Art wksht 2/7</span>
-	  		</div>
-	  		<div class="attachment" title="Countries review 1/15">
-	  			<div class="attachment-pic ppt"></div>
-	  			<span class="attachment-label">Countries review 1/15</span>
-	  		</div>
-  		</div>
-  		<div class="attachment-row">
-	  		<div class="attachment">
-	  			<div class="attachment-pic excel"></div>
-	  			<span class="attachment-label">Grade report Q2</span>
-	  		</div>
-	  		<div class="attachment">
-	  			<div class="attachment-pic word"></div>
-	  			<span class="attachment-label">Spelling unit 6</span>
-	  		</div>
-  		</div>
   	</div>
   </div>
   <div id='messages-list'>
@@ -65,10 +35,16 @@
   <div id='messages-input-container'>
     <form id="send-message-form">
 	  	<label class="btn btn-default btn-file send-attachment">
-		    <input type="file" id="file-input" hidden>
+		    <input type="file" id="file-input" onchange="handleFiles(this.files)" style="display:none">
 		</label>
-	  	<input type='text' id='messages-input' autocomplete="off"/>
-	  	<button class="btn btn-primary" type="submit" id="send-message-button">Send</button>
+		<div id="text-input-container">
+			<div id="attachment-preview" style="display:none">
+				<div id="attachment-preview-text"></div>
+				<div id="clear-attachment" onclick="clearAttachment()"></div>
+			</div>
+			<input type='text' id='messages-input' autocomplete="off"/>
+			<button class="btn btn-primary" type="submit" id="send-message-button">Send</button>
+		</div>
   	</form>
   </div>
 
@@ -76,10 +52,10 @@
 <script type="text/javascript">
 	var messageId = 5;
 	var stockMessages = ["This is lit af dude", "Robby is a genius", "You're a wonderful parent", "Hi Laura", "You need to come in and teach Robby fractions", "Thank you", "Random messages ftw"];
+	var newAttachment =  null;
 	function SendMessage(){
 		var text = $("#messages-input").val();
 		var file = $("#file-input").val();
-		console.log(file);
 		if (text !== ""){
 			$("#messages-input").val("");
 			var list = $("#messages-list");
@@ -92,8 +68,7 @@
 			}, 1000);
 			generateRandomMessage();
 		}
-		if (file !== ""){
-			$("#file-input").val("");
+		if (file !== "" && newAttachment){
 			var fileArray = file.split("\\");
 			text = fileArray[fileArray.length - 1];
 			var list = $("#messages-list");
@@ -104,6 +79,9 @@
 			list.animate({
 			    scrollTop: list[0].scrollHeight
 			}, 1000);
+			$("#attachments-list")[0].appendChild(newAttachment);
+			clearAttachment();
+			newAttachment = null;
 			generateRandomMessage();
 		}
 		
@@ -123,11 +101,70 @@
 		}, 1000);
 
 	}
-	/*$("#send-message-button").click(SendMessage);
-	$('#messages-input').keypress(function(event) {
-    if (event.keyCode == 13 || event.which == 13) {
-        SendMessage();
-    }*/
+
+	function handleFiles(files) {
+		console.log(files);
+		if (!files.length) {
+			return;
+		}
+		for(var i=0; i < files.length; i++) {
+			loadAttachment(files[i]);
+			loadPreview(files[i]);
+		}
+	}
+
+	function loadPreview(file) {
+		$("#attachment-preview-text").text(file.name);
+		$("#attachment-preview").css("display", "inline-block");
+	}
+
+	function clearAttachment() {
+		newAttachment = null;
+		$("#attachment-preview-text").empty();
+		$("#file-input").val("");
+		$("#attachment-preview").css("display", "none");
+	}
+
+	function loadAttachment(file) {
+		var url = window.URL.createObjectURL(file);
+		var name = file.name;
+		
+	    var link = document.createElement('a');
+		link.classList.add("attachment");
+		link.addEventListener('click', function(ev) {
+		    link.href = url;
+		    link.download = name;
+		}, false);
+		var pic = document.createElement('div');
+		var type = getAttachmentPic(name);
+		pic.classList.add("attachment-pic", type);
+		var label = document.createElement('div');
+		label.classList.add("attachment-label");
+		label.innerHTML =name;
+		link.appendChild(pic);
+		link.appendChild(label);
+		newAttachment = link;
+	}
+
+	function getAttachmentPic(name) {
+		var ext = name.split(".")[1];
+		if (ext.includes("ppt")) {
+			return "ppt";
+		}
+		else if (ext.includes("doc")) {
+			return "word";
+		}
+		else if (ext.includes("xl")) {
+			return "excel";
+		}
+		else if (ext.includes("pdf")){
+			return "pdf";
+		}
+		else {
+			return "file";
+		}
+	}
+
     $("#send-message-form").submit(function(e){
     	console.log("bitches");
     	e.preventDefault();

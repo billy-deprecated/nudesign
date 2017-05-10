@@ -102,7 +102,7 @@ posts[3] = {"Avatar": {
 commentStorage[0] = []
 commentStorage[0].push({"Avatar":{
   "Poster": "Sara",
-  "src": "graphics/ruby.png"
+  "src": "graphics/sara.png"
   },
   "Comment":{
    "Date": "March 3rd, 2017 7:25:00 PM",

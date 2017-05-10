@@ -82,6 +82,7 @@
 
 .selectedMenuItem {
   background-color: #0ca001;
+  font-style: italic;
   cursor: default;
 }
 
@@ -300,12 +301,12 @@ td, th {
 }
 
 .hoveredGrade {
-  background-color: #64ff64;
-  color: #807e7e;
+  background-color: #0478ae;
+  color: white;
 }
 
 .selectedGrade {
-  background-color: #0478ae;
+  background-color: #0ca001;
   color: white;
   font-style: italic;
 }

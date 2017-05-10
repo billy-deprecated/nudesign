@@ -65,6 +65,45 @@ $(document).ready(function() {
   $("#bulletin").click();
 });
 
+$(document).on({
+  // when mouse hovers a grade item
+  mouseenter: function(){
+    $(this).addClass('hoveredGrade');
+  },
+  // remove hovered class after mouse leaves
+  mouseleave: function(){
+    $(this).removeClass('hoveredGrade');
+  }
+}, '.subject');
+
+// side menu option clicked
+$(document).on('click', '.subject', function(evt){
+  // if this subject is already selected, do nothing
+  if($(this).hasClass('selectedGrade')){
+    return;
+  }
+
+  var currentSubject;
+  var newSubject;
+  // unselect the current selected subject
+  for(var i in SUBJECTS){
+    if($(SUBJECTS[i]).hasClass('selectedGrade')){
+      $(SUBJECTS[i]).removeClass('selectedGrade');
+      currentSubject = SUBJECTS[i].slice(1);
+    }
+  }
+  // remove hovered class and add selected class to new subject
+  for(var i in SUBJECTS){
+    if($(SUBJECTS[i]).hasClass('hoveredGrade')){
+      $(SUBJECTS[i]).removeClass('hoveredGrade');
+      $(SUBJECTS[i]).addClass('selectedGrade');
+      newSubject = SUBJECTS[i].slice(1);
+    }
+  }
+  var newTable=$("#assignmentstable").html().replace(new RegExp(currentSubject, 'g'), newSubject);
+  $("#table").replaceWith(newTable);
+});
+
 function populateMessages(){
   var list = $("#messages-list");
   list.append("<div class='message'> <div class='received message-bubble' id='message-1'> <div class='message-time'>25 March, 2017</div>Hi, How are you?</div></div>");

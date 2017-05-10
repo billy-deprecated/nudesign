@@ -118,15 +118,15 @@
 }
 
 .send-attachment {
-  height: 4em;
+  height: 3.8em;
   background-size: contain;
-  width: 4em;
+  width: 3.8em;
   display: inline-block;
   background-image: url(../graphics/paper-clip-2-xxl.png);
   cursor: pointer;
 }
 
-.send-attachment::hover {
+.send-attachment:hover {
   opacity: .5;
 }
 
@@ -137,18 +137,14 @@
   border: 1px solid gray;
   display: inline-block;
   font-size: 20px;
-  top: -1.2em;
-  position: relative;
 }
 #send-message-button {
   height: 1.8em;
-  width: 15%;
+  width: 4em;
   margin-left: 25px;
   font-size: 30px;
   border-color: green;
   background-color: darkgreen;
-  position: relative;
-  top: -.9em;
   cursor: pointer;
 }
 

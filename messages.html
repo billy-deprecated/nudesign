@@ -48,9 +48,13 @@
   <div id='messages-list'>
   </div>
   <div id='messages-input-container'>
-  	<div class="send-attachment"></div>
-  	<input type='text' id='messages-input'/>
-  	<button class="btn btn-primary" type="button" id="send-message-button">Send</button>
+    <form id="send-message-form">
+	  	<label class="btn btn-default btn-file send-attachment">
+		    <input type="file" id="file-input" hidden>
+		</label>
+	  	<input type='text' id='messages-input' autocomplete="off"/>
+	  	<button class="btn btn-primary" type="submit" id="send-message-button">Send</button>
+  	</form>
   </div>
   
 </div>
@@ -59,16 +63,35 @@
 	var stockMessages = ["This is lit af dude", "Robby is a genius", "You're a wonderful parent", "Hi Laura", "You need to come in and teach Robby fractions", "Thank you", "Random messages ftw"];
 	function SendMessage(){
 		var text = $("#messages-input").val();
-		$("#messages-input").val("");
-		var list = $("#messages-list");
-		messageId++;
-		var time = new Date();
-		time = time.toDateString();
-		list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
-		list.animate({
-		    scrollTop: list[0].scrollHeight
-		}, 1000);
-		generateRandomMessage();
+		var file = $("#file-input").val();
+		console.log(file);
+		if (text !== ""){
+			$("#messages-input").val("");
+			var list = $("#messages-list");
+			messageId++;
+			var time = new Date();
+			time = time.toDateString();
+			list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
+			list.animate({
+			    scrollTop: list[0].scrollHeight
+			}, 1000);
+			generateRandomMessage();
+		}
+		if (file !== ""){
+			$("#file-input").val("");
+			var fileArray = file.split("\\");
+			text = fileArray[fileArray.length - 1];
+			var list = $("#messages-list");
+			messageId++;
+			var time = new Date();
+			time = time.toDateString();
+			list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
+			list.animate({
+			    scrollTop: list[0].scrollHeight
+			}, 1000);
+			generateRandomMessage();
+		}
+		
 	}
 	function generateRandomMessage() {
 		setTimeout(receiveMessage, Math.floor(Math.random() * (5000)));
@@ -85,10 +108,15 @@
 		}, 1000);
 
 	}
-	$("#send-message-button").click(SendMessage);
+	/*$("#send-message-button").click(SendMessage);
 	$('#messages-input').keypress(function(event) {
     if (event.keyCode == 13 || event.which == 13) {
         SendMessage();
-    }
-});
+    }*/
+    $("#send-message-form").submit(function(e){
+    	console.log("bitches");
+    	e.preventDefault();
+    	SendMessage();
+    	return false;
+    });
 </script>

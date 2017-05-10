@@ -19,7 +19,7 @@ function processDate(date) {
   if (minutes < 10) {
     addZero = "0"
   }
-  return month + " "+ day + ", "+ year + " " +hour +":" + minutes + addZero + " " + last
+  return month + " "+ day + ", "+ year + " " +hour +":" +addZero +  minutes  + " " + last
 }
 
 function postComment(text,date,container,id) {

@@ -63,9 +63,9 @@
 			var list = $("#messages-list");
 			messageId++;
 			var time = new Date();
-			time = time.toDateString();
+			time = processDate(time);
 			MESSAGES.push({time: time, text: text, sent:"sent"});
-			list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
+			list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div><span class='kif'>"+text+"</span></div></div>");
 			list.animate({
 			    scrollTop: list[0].scrollHeight
 			}, 1000);
@@ -77,9 +77,9 @@
 			var list = $("#messages-list");
 			messageId++;
 			var time = new Date();
-			time = time.toDateString();
+			time = processDate(time);
 			MESSAGES.push({time: time, text: text, sent:"sent"});
-			list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
+			list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div><span class='kif'>"+text+"</span></div></div>");
 			list.animate({
 			    scrollTop: list[0].scrollHeight
 			}, 1000);
@@ -90,6 +90,25 @@
 		}
 
 	}
+
+  function processDate(date) {
+    month = months[date.getMonth()];
+    day = date.getDate();
+    year = date.getFullYear();
+    hour = date.getHours()%12;
+    isPM = (hour/12) >=1;
+    last = "AM";
+    if (isPM){
+      last= "PM"
+    }
+    minutes = date.getMinutes();
+    addZero = "";
+    if (minutes < 10) {
+      addZero = "0"
+    }
+    return month + " "+ day + ", "+ year + " " +hour +":" + minutes + addZero + " " + last
+  }
+
 	function generateRandomMessage() {
 		setTimeout(receiveMessage, Math.floor(Math.random() * (5000)));
 	}
@@ -98,9 +117,9 @@
 		var list = $("#messages-list");
 		messageId++;
 		var time = new Date();
-		time = time.toDateString();
+		time = processDate(time);
 		MESSAGES.push({time: time, text: text, sent:"received"});
-		list.append("<div class='message'> <div class='received message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
+		list.append("<div class='message'> <div class='received message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div><span class='kif'>"+text+"</span></div></div>");
 		list.animate({
 		    scrollTop: list[0].scrollHeight
 		}, 1000);
@@ -108,7 +127,7 @@
 	}
 
 	function handleFiles(files) {
-		console.log(files);
+		//console.log(files);
 		if (!files.length) {
 			return;
 		}
@@ -171,7 +190,7 @@
 	}
 
     $("#send-message-form").submit(function(e){
-    	console.log("bitches");
+    	//console.log("bitches");
     	e.preventDefault();
     	SendMessage();
     	return false;

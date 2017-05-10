@@ -5,19 +5,22 @@
 <head>
 <meta charset='utf-8'>
 <title>inclass</title>
-
-<!-- Load style sheets -->
-<link rel='stylesheet' href=
-  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css'>
-<link rel='stylesheet' href='assets/mainLayout.css'>
-<link rel='stylesheet' href='assets/bulletin.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway'>
-<link href="assets/flag-icon-css-master/assets/docs.css" rel="stylesheet">
-  <link href="assets/flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
 <script src=
   'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='templates.js'></script>
+<!-- Load style sheets -->
+<link rel='stylesheet' href=
+  'bootstrap-3.3.7-dist/css/bootstrap.min.css'>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway'>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="assets/mainLayout.css">
+<link rel='stylesheet' href='assets/bulletin.css'>
+<link href="assets/flag-icon-css-master/assets/docs.css" rel="stylesheet">
+  <link href="assets/flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
 
+<script src='templates.js'></script>
+<script src="comment.js"></script>
+<script src="bulletinloader.js"></script>
 <script>
 
 var MENU_ITEMS = ['#bulletin', '#grades', '#messages'];
@@ -59,9 +62,13 @@ $(document).on('click', '.menuItem', function(evt){
   $('#mode-panel').load("./"+newMode+".html", function(){
     if (newMode === 'messages') {
       populateMessages();
+    } else if (newMode == "bulletin"){
+      console.log("hey");
+      bootstrap();
     }
   });
 });
+
 
 $(document).ready(function() {
   $("#bulletin").click();

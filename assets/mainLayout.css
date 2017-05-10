@@ -5,7 +5,7 @@
   width: 180px;
   position: fixed;
   border-right: 1px solid gray;
-  background-color: #02344b;
+  background-color: #222e35;
 }
 #mainWindow {
   margin-left: 180px;
@@ -39,7 +39,7 @@
   width: 100%;
   border-bottom: 2px solid black;
   height: 10%;
-  background-color: #0478ae;
+  background-color: #75c2e6;
 }
 
 .welcome-message {

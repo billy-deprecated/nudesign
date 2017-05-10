@@ -116,9 +116,10 @@ $(document).ready(function() {
   $("#language-button").on("mouseout", function(e){
     $(e.currentTarget).text(languageVal);
   });
-  $("#language-button").on("click", function(e){
-    if (languageVal == "English"){
-      languageVal = "Español";
+
+  $("#language-button").on("click", function(e) {
+      if (languageVal == "English"){
+        languageVal = "Español"
       $("#bulletin").text("Boletín")
       $("#grades").text("Grados")
       $("#messages").text("Mensajes")
@@ -188,9 +189,7 @@ function populateMessages(){
     var msg = MESSAGES[i];
     list.append("<div class='message'> <div class='"+msg.sent+" message-bubble' id='message-1'> <div class='message-time'>"+msg.time+"</div>"+msg.text+"</div></div>");
   }
-  list.animate({
-      scrollTop: list[0].scrollHeight
-  }, 1000);
+  list[0].scrollTop = list[0].scrollHeight;
 }
 
 </script>

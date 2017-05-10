@@ -29,6 +29,14 @@ var SUBJECTS = ['#Math', '#Reading', '#Science', '#Art']
 
 var TEMPLATES = {'bulletin':'#bulletin_template', 'grades':'#grades_template', 'messages':'#messages_template'}
 
+var MESSAGES = [  
+  {time: "25 March, 2017", text: "Hi", sent: "received"},
+  {time: "25 March, 2017", text: "Hi, How are you?", sent: "sent"},
+  {time: "25 March, 2017", text: "I posted grades for last week's quiz. You should go over it with Robby, he struggled.", sent: "received"},
+  {time: "25 March, 2017", text: "Thanks for letting me know! I'll get right on that since he can't add to save his life.", sent: "sent"},
+  {time: "25 March, 2017", text: "Great, thanks fam.", sent: "received"},
+  {time: "25 March, 2017", text: "Got it bruh. Talk to you later", sent: "sent"}]
+
 // mouse hover over or away from side menu option
 $(document).on({
   // when mouse hovers a menu item that's not currently selected
@@ -114,11 +122,13 @@ $(document).on('click', '.subject', function(evt){
 
 function populateMessages(){
   var list = $("#messages-list");
-  list.append("<div class='message'> <div class='received message-bubble' id='message-1'> <div class='message-time'>25 March, 2017</div>Hi, How are you?</div></div>");
-  list.append("<div class='message'> <div class='received message-bubble' id='message-2'> <div class='message-time'>25 March, 2017</div>I posted grades for last week's quiz. You should go over it with Robby, he struggled.</div></div>");
-  list.append("<div class='message'> <div class='sent message-bubble' id='message-3'> <div class='message-time'>25 March, 2017</div>Thanks for letting me know! I'll get right on that since he can't add to save his life.</div></div>");
-  list.append("<div class='message'> <div class='received message-bubble' id='message-4'><div class='message-time'>25 March, 2017</div>Great, thanks fam.</div></div>");
-  list.append("<div class='message'> <div class='sent message-bubble' id='message-5'><div class='message-time'>25 March, 2017</div>Got it bruh. Talk to you later</div></div>");
+  for (var i=0; i < MESSAGES.length; i++) {
+    var msg = MESSAGES[i];
+    list.append("<div class='message'> <div class='"+msg.sent+" message-bubble' id='message-1'> <div class='message-time'>"+msg.time+"</div>"+msg.text+"</div></div>");
+  }
+  list.animate({
+      scrollTop: list[0].scrollHeight
+  }, 1000);
 }
 
 </script>

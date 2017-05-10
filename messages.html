@@ -65,6 +65,7 @@ $("#top-bar").append("<div class='welcome-message'> Messages</div>");
 			messageId++;
 			var time = new Date();
 			time = time.toDateString();
+			MESSAGES.push({time: time, text: text, sent:"sent"});
 			list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
 			list.animate({
 			    scrollTop: list[0].scrollHeight
@@ -78,6 +79,7 @@ $("#top-bar").append("<div class='welcome-message'> Messages</div>");
 			messageId++;
 			var time = new Date();
 			time = time.toDateString();
+			MESSAGES.push({time: time, text: text, sent:"sent"});
 			list.append("<div class='message'> <div class='sent message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
 			list.animate({
 			    scrollTop: list[0].scrollHeight
@@ -98,6 +100,7 @@ $("#top-bar").append("<div class='welcome-message'> Messages</div>");
 		messageId++;
 		var time = new Date();
 		time = time.toDateString();
+		MESSAGES.push({time: time, text: text, sent:"received"});
 		list.append("<div class='message'> <div class='received message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div>"+text+"</div></div>");
 		list.animate({
 		    scrollTop: list[0].scrollHeight

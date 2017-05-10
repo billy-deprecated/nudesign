@@ -322,7 +322,7 @@ td, th {
 #rightBar {
   width: 50%;
   height: 100%;
-  padding: 30px 100px 30px;
+  padding: 0px 100px 30px;
   display: inline-block;
   float: right;
   text-align:center;
@@ -358,6 +358,8 @@ td, th {
 #assignments {
   float: left;
   font-size: 30pt;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 #subjecttable {

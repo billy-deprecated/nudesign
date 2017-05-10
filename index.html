@@ -22,6 +22,8 @@
 
 var MENU_ITEMS = ['#bulletin', '#grades', '#messages'];
 
+var SUBJECTS = ['#Math', '#Reading', '#Science', '#Art'];
+
 var TEMPLATES = {'bulletin':'#bulletin_template', 'grades':'#grades_template', 'messages':'#messages_template'}
 
 // mouse hover over or away from side menu option
@@ -68,8 +70,6 @@ $(document).ready(function() {
 $(document).on({
   // when mouse hovers a grade item
   mouseenter: function(){
-    console.log("Hovered over td")
-    console.log(this)
     $(this).addClass('hoveredGrade');
   },
   // remove hovered class after mouse leaves
@@ -77,6 +77,30 @@ $(document).on({
     $(this).removeClass('hoveredGrade');
   }
 }, '.subject');
+
+// side menu option clicked
+$(document).on('click', '.subject', function(evt){
+  // if this item is already selected, do nothing
+  if($(this).hasClass('selectedGrade')){
+    return;
+  }
+  var currentSubject;
+  // unselect the current selected item
+  for(var i in SUBJECTS){
+    if($(SUBJECTS[i]).hasClass('selectedGrade')){
+      $(SUBJECTS[i]).removeClass('selectedGrade');
+      currentSubject = SUBJECTS[i].slice(1);
+    }
+  }
+  // select the new one
+  $(this).removeClass('hoveredGrade');
+  $(this).addClass('selectedGrade');
+
+  var newSubject = $(this).get(0).id;
+  var newTable=$("#assignmentstable").html().replace(new RegExp(currentSubject, 'g'), newSubject);
+
+  $("#table").replaceWith(newTable);
+});
 
 function populateMessages(){
   var list = $("#messages-list");

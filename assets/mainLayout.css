@@ -298,6 +298,12 @@ td, th {
   color: #807e7e;
 }
 
+.selectedGrade {
+  background-color: #0478ae;
+  color: white;
+  font-style: italic;
+}
+
 #leftBar {
   width:50%;
   height:100%;

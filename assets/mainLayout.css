@@ -22,6 +22,8 @@
 }
 #language-icon {
   display: inline-block;
+  height: 60px;
+  width: 60px;
 }
 #language-button {
   height: 40px;

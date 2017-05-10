@@ -117,26 +117,29 @@
 }
 
 .comment-entry{
-  width: 100%;
-  border: 1px solid;
-  border-radius:10px;
-  border-color: rgb(4, 120, 174);
+  width: 90%;
+  margin:auto;
   margin-bottom: .5em;
 }
 
 .post-row{
   overflow:auto;
+  display:inline-block;
+  width:29%;
+  vertical-align: top;
 }
 
 
 textarea {
-  border:none;
+  border: 1px solid;
+  border-radius:10px;
+  border-color: rgb(4, 120, 174);
   resize: none;
   overflow: hidden;
   outline:none;
-  width: 98%;
-  margin:.4em;
-  margin-bottom:0em;
+  width: 70%;
+  padding:5px;
+  height:1em;
 }
 
 .comments {

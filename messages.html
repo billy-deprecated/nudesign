@@ -19,7 +19,6 @@
 $(".welcome-message").remove();
 </script>
 
-<div class='section-title'>Messages</div>
 <div id='messages-container'>
   <div id='messages-attachments-pane'>
   	<div id='messaging-contact'>
@@ -109,7 +108,7 @@ $(".welcome-message").remove();
 			}, 1000);
 			generateRandomMessage();
 		}
-		
+
 	}
 	function generateRandomMessage() {
 		setTimeout(receiveMessage, Math.floor(Math.random() * (5000)));

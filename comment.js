@@ -3,7 +3,7 @@ commentStorage = [];
 function postComment(text,date,container,id) {
   comment = {"Avatar":{
     "Poster": "Ruby",
-    "src":    "graphics/sara.png"
+    "src":    "graphics/ruby.png"
      },
    "Comment": {
      "Date": date,
@@ -26,5 +26,4 @@ function postComment(text,date,container,id) {
     commentStorage[Number(id)] = [];
   }
   commentStorage[Number(id)].push(comment);
-  console.log(commentStorage);
 }

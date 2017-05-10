@@ -114,11 +114,11 @@
 	}
 	function receiveMessage() {
 	    var text = stockMessages[Math.floor(Math.random() * (stockMessages.length))];
-		var list = $("#messages-list");
-		messageId++;
 		var time = new Date();
 		time = processDate(time);
 		MESSAGES.push({time: time, text: text, sent:"received"});
+		var list = $("#messages-list");
+		messageId++;
 		list.append("<div class='message'> <div class='received message-bubble' id='message-"+messageId+"'><div class='message-time'>"+time+"</div><span class='kif'>"+text+"</span></div></div>");
 		list.animate({
 		    scrollTop: list[0].scrollHeight

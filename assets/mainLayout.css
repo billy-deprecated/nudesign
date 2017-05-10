@@ -85,7 +85,7 @@
   cursor: default;
 }
 
-.hovered {
+.hoveredMenuItem {
   background-color: #e3edef;
   color: black;
 }
@@ -287,6 +287,17 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+}
+
+.hoveredGrade {
+  background-color: #64ff64;
+  color: #807e7e;
+}
+
+.selectedGrade {
+  background-color: #0478ae;
+  color: white;
+  font-style: italic;
 }
 
 #leftBar {

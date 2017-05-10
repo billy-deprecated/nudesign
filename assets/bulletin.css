@@ -44,8 +44,8 @@
 
 .content {
   border-width:2%;
-  border: 2px solid darkgreen;
-  border-radius: 20px;
+  border: 1px solid darkgray;
+  border-radius: 7px;
   background-color: #f7fbfc;
 }
 .reminder {
@@ -108,19 +108,13 @@
 }
 
 #public-comment {
-  float:left;
-  margin-left:2%;
-  background-color: #f9f68e;
-  color: black;
-  border-color: gray;
-}
-
-#private-comment {
   float:right;
   margin-right:2%;
-  background-color: #ad17d3;
-  border-color: purple;
+  background-color: #ad17d3;;
+  color: white;
+  border-color: darkviolet;
 }
+
 .comments {
   padding:.5em;
 }
@@ -130,8 +124,8 @@
 }
 .entry {
   padding-bottom:1em;
-  border-radius: 10px;
-  background-color: #e8e8e8;
+  border-radius: 4px;
+  background-color: #e9ebf5;
 }
 .comments .avatar {
   margin-left: 1%;
@@ -142,11 +136,13 @@
 }
 
 .poster {
-  color:blue;
+  color:#3f3f5a;
+  font-weight: bold;
 }
 .comments .poster {
   margin-left: 0%;
-  color:blue;
+  color:#3f3f5a;
+  font-weight: bold;
 }
 
 .comment {

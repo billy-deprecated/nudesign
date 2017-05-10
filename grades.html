@@ -1,151 +1,152 @@
 <!--Nu Designs 6.813 project: inclass, Grades page-->
 <!DOCTYPE html>
+
 <div class='section-title'>Robby's Grades</div>
-<div id='grades-container'> 
-    <div id='leftBar'> 
-      <div id='gradetablecaption'>Overall Grades</div> 
-      <div id="subjecttable"><table id='overall'> 
-      
-      <tr> 
-      <th>Subject</th> 
-      <th>Grade</th> 
-      </tr> 
+<div id='grades-container'>
+    <div id='leftBar'>
+      <div id='gradetablecaption'>Overall Grades</div>
+      <div id="subjecttable"><table id='overall'>
 
-      <tr> 
-      <td>Math</td> 
-      <td>90%</td> 
-      </tr> 
+      <tr>
+      <th>Subject</th>
+      <th>Grade</th>
+      </tr>
 
-      <tr> 
-      <td>Reading</td> 
-      <td>80%</td> 
-      </tr> 
+      <tr>
+      <td class='subject' class='selectedGrade' id='Math'>Math</td>
+      <td>90%</td>
+      </tr>
 
-      <tr> 
-      <td>Science</td> 
-      <td>100%</td> 
-      </tr> 
+      <tr>
+      <td class='subject' id='Reading'>Reading</td>
+      <td>80%</td>
+      </tr>
 
-      <tr> 
-      <td>Art</td> 
-      <td>75%</td> 
-      </tr> 
+      <tr>
+      <td class='subject' id='Science'>Science</td>
+      <td>100%</td>
+      </tr>
 
-      </table> 
+      <tr>
+      <td class='subject' id='Art'>Art</td>
+      <td>75%</td>
+      </tr>
+
+      </table>
       </div>
-    </div> 
+    </div>
 
-    <div id='rightBar'> 
+    <div id='rightBar'>
       <div id="assignments">Assignments</div>
-      <div id="dropdown"><select> 
-        <option>Math</option> 
-        <option>Reading</option> 
-        <option>Science</option> 
-        <option>Art</option> 
+      <!-- <div id="dropdown"><select>
+        <option>Math</option>
+        <option>Reading</option>
+        <option>Science</option>
+        <option>Art</option>
       </select>
+      </div> -->
+      <div id="assignmentstable">
+        <table id='table'>
+
+          <!-- MATH GRADES -->
+          <tr>
+          <th>Date</th>
+          <th>Assignment</th>
+          <th>Grade</th>
+          </tr>
+
+          <tr>
+          <td>March 15, 2017</td>
+          <td>Math HW #12</td>
+          <td>100%</td>
+          </tr>
+
+          <tr>
+          <td>March 14, 2017</td>
+          <td>Math HW #11</td>
+          <td>90%</td>
+          </tr>
+
+          <tr>
+          <td>March 13, 2017</td>
+          <td>Math HW #10</td>
+          <td>60%</td>
+          </tr>
+
+          <tr>
+          <td>March 12, 2017</td>
+          <td>Math HW #9</td>
+          <td>70%</td>
+          </tr>
+
+          <tr>
+          <td>March 11, 2017</td>
+          <td>Math Test #3</td>
+          <td>95%</td>
+          </tr>
+
+          <tr>
+          <td>March 10, 2017</td>
+          <td>Math HW #8</td>
+          <td>100%</td>
+          </tr>
+
+          <tr>
+          <td>March 9, 2017</td>
+          <td>Math HW #7</td>
+          <td>80%</td>
+          </tr>
+
+          <tr>
+          <td>March 8, 2017</td>
+          <td>Math HW #6</td>
+          <td>40%</td>
+          </tr>
+
+          <tr>
+          <td>March 7, 2017</td>
+          <td>Math Test #2</td>
+          <td>100%</td>
+          </tr>
+
+          <tr>
+          <td>March 6, 2017</td>
+          <td>Math HW #5</td>
+          <td>100%</td>
+          </tr>
+
+          <tr>
+          <td>March 5, 2017</td>
+          <td>Math HW #4</td>
+          <td>93%</td>
+          </tr>
+
+          <tr>
+          <td>March 4, 2017</td>
+          <td>Math Test #1</td>
+          <td>91.3%</td>
+          </tr>
+
+          <tr>
+          <td>March 3, 2017</td>
+          <td>Math HW #3</td>
+          <td>93.2%</td>
+          </tr>
+
+          <tr>
+          <td>March 2, 2017</td>
+          <td>Math HW #2</td>
+          <td>91.1%</td>
+          </tr>
+
+          <tr>
+          <td>March 1, 2017</td>
+          <td>Math HW #1</td>
+          <td>89%</td>
+          </tr>
+
+        </table>
       </div>
-      <div id="assignmentstable"><table id='table'> 
-      
-      <tr> 
-      <th>Date</th> 
-      <th>Assignment</th>
-      <th>Grade</th> 
-      </tr> 
 
-      <tr> 
-      <td>March 15, 2017</td> 
-      <td>HW #12</td>
-      <td>100%</td> 
-      </tr> 
-
-      <tr> 
-      <td>March 14, 2017</td> 
-      <td>HW #11</td>
-      <td>90%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 13, 2017</td> 
-      <td>HW #10</td>
-      <td>60%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 12, 2017</td> 
-      <td>HW #9</td>
-      <td>70%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 11, 2017</td> 
-      <td>Test #3</td>
-      <td>95%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 10, 2017</td> 
-      <td>HW #8</td>
-      <td>100%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 9, 2017</td> 
-      <td>HW #7</td>
-      <td>80%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 8, 2017</td> 
-      <td>HW #6</td>
-      <td>40%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 7, 2017</td> 
-      <td>Test #2</td>
-      <td>100%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 6, 2017</td> 
-      <td>HW #5</td>
-      <td>100%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 5, 2017</td> 
-      <td>HW #4</td>
-      <td>93%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 4, 2017</td> 
-      <td>Test #1</td>
-      <td>91.3%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 3, 2017</td> 
-      <td>HW #3</td>
-      <td>93.2%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 2, 2017</td> 
-      <td>HW #2</td>
-      <td>91.1%</td> 
-      </tr>
-
-      <tr> 
-      <td>March 1, 2017</td> 
-      <td>HW #1</td>
-      <td>89%</td> 
-      </tr>
-
-      </table> 
-      </div>
-      
-    </div> 
+    </div>
 </div>
-
-

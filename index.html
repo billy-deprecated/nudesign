@@ -22,6 +22,8 @@
 
 var MENU_ITEMS = ['#bulletin', '#grades', '#messages'];
 
+var SUBJECTS = ['#Math', '#Reading', '#Science', '#Art'];
+
 var TEMPLATES = {'bulletin':'#bulletin_template', 'grades':'#grades_template', 'messages':'#messages_template'}
 
 // mouse hover over or away from side menu option
@@ -29,12 +31,12 @@ $(document).on({
   // when mouse hovers a menu item that's not currently selected
   mouseenter: function(){
       if(!$(this).hasClass('selectedMenuItem')){
-        $(this).addClass('hovered');
+        $(this).addClass('hoveredMenuItem');
       }
   },
   // remove hovered class after mouse leaves
   mouseleave: function(){
-      $(this).removeClass('hovered');
+      $(this).removeClass('hoveredMenuItem');
   }
 }, '.menuItem');
 
@@ -49,7 +51,7 @@ $(document).on('click', '.menuItem', function(evt){
     $(MENU_ITEMS[i]).removeClass('selectedMenuItem');
   }
   // select the new one
-  $(this).removeClass('hovered');
+  $(this).removeClass('hoveredMenuItem');
   $(this).addClass('selectedMenuItem');
 
   // TODO: reload to new respective view
@@ -63,6 +65,52 @@ $(document).on('click', '.menuItem', function(evt){
 
 $(document).ready(function() {
   $("#bulletin").click();
+});
+
+$(document).on({
+  // when mouse hovers a grade item
+  mouseenter: function(){
+    $(this).addClass('hoveredGrade');
+  },
+  // remove hovered class after mouse leaves
+  mouseleave: function(){
+    $(this).removeClass('hoveredGrade');
+  }
+}, '.subject');
+
+// side menu option clicked
+$(document).on('click', '.subject', function(evt){
+  console.log("this:", $(this));
+  // if this item is already selected, do nothing
+  if($(this).hasClass('selectedGrade')){
+    return;
+  }
+  var currentSubject;
+  var newSubject;
+  // unselect the current selected grade
+  for(var i in SUBJECTS){
+    if($(SUBJECTS[i]).hasClass('selectedGrade')){
+      $(SUBJECTS[i]).removeClass('selectedGrade');
+      currentSubject = SUBJECTS[i].slice(1);
+    }
+  }
+  for(var i in SUBJECTS){
+    if($(SUBJECTS[i]).hasClass('hoveredGrade')){
+      $(SUBJECTS[i]).removeClass('hoveredGrade');
+      $(SUBJECTS[i]).addClass('selectedGrade');
+      newSubject = SUBJECTS[i].slice(1);
+    }
+  }
+  console.log("currentSubject: ", currentSubject);
+  // select the new one
+  // $(this).removeClass('hoveredGrade');
+  // $(this).addClass('selectedGrade');
+
+  // var newSubject = "Art"//$(this).get(0).id;
+  console.log("newSubject: ", newSubject);
+  var newTable=$("#assignmentstable").html().replace(new RegExp(currentSubject, 'g'), newSubject);
+  console.log("newTable: ", newTable);
+  $("#table").replaceWith(newTable);
 });
 
 function populateMessages(){

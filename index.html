@@ -22,8 +22,6 @@
 
 var MENU_ITEMS = ['#bulletin', '#grades', '#messages'];
 
-var SUBJECTS = ['#Math', '#Reading', '#Science', '#Art'];
-
 var TEMPLATES = {'bulletin':'#bulletin_template', 'grades':'#grades_template', 'messages':'#messages_template'}
 
 // mouse hover over or away from side menu option
@@ -67,52 +65,6 @@ $(document).ready(function() {
   $("#bulletin").click();
 });
 
-$(document).on({
-  // when mouse hovers a grade item
-  mouseenter: function(){
-    $(this).addClass('hoveredGrade');
-  },
-  // remove hovered class after mouse leaves
-  mouseleave: function(){
-    $(this).removeClass('hoveredGrade');
-  }
-}, '.subject');
-
-// side menu option clicked
-$(document).on('click', '.subject', function(evt){
-  console.log("this:", $(this));
-  // if this item is already selected, do nothing
-  if($(this).hasClass('selectedGrade')){
-    return;
-  }
-  var currentSubject;
-  var newSubject;
-  // unselect the current selected grade
-  for(var i in SUBJECTS){
-    if($(SUBJECTS[i]).hasClass('selectedGrade')){
-      $(SUBJECTS[i]).removeClass('selectedGrade');
-      currentSubject = SUBJECTS[i].slice(1);
-    }
-  }
-  for(var i in SUBJECTS){
-    if($(SUBJECTS[i]).hasClass('hoveredGrade')){
-      $(SUBJECTS[i]).removeClass('hoveredGrade');
-      $(SUBJECTS[i]).addClass('selectedGrade');
-      newSubject = SUBJECTS[i].slice(1);
-    }
-  }
-  console.log("currentSubject: ", currentSubject);
-  // select the new one
-  // $(this).removeClass('hoveredGrade');
-  // $(this).addClass('selectedGrade');
-
-  // var newSubject = "Art"//$(this).get(0).id;
-  console.log("newSubject: ", newSubject);
-  var newTable=$("#assignmentstable").html().replace(new RegExp(currentSubject, 'g'), newSubject);
-  console.log("newTable: ", newTable);
-  $("#table").replaceWith(newTable);
-});
-
 function populateMessages(){
   var list = $("#messages-list");
   list.append("<div class='message'> <div class='received message-bubble' id='message-1'> <div class='message-time'>25 March, 2017</div>Hi, How are you?</div></div>");
@@ -144,7 +96,6 @@ function populateMessages(){
   </div>
   <div id="mainWindow">
     <div id="top-bar">
-      <div class="welcome-message"> Hi Ruby!</div>
       <button class="btn btn-danger" type="button" id="logout-button">Logout</button>
       <div id="language-group">
         <div id="language-icon"><span class="flag-icon flag-icon-us"></div>

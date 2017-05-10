@@ -16,8 +16,7 @@
   </div>
 </div> -->
 <script>
-$(".welcome-message").remove();
-$("#top-bar").append("<div class='welcome-message'> Messages</div>");
+
 </script>
 
 <div id='messages-container'>
@@ -134,7 +133,7 @@ $("#top-bar").append("<div class='welcome-message'> Messages</div>");
 	function loadAttachment(file) {
 		var url = window.URL.createObjectURL(file);
 		var name = file.name;
-		
+
 	    var link = document.createElement('a');
 		link.classList.add("attachment");
 		link.addEventListener('click', function(ev) {

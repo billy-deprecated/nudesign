@@ -1,11 +1,12 @@
 //Post 1
-posts = []
+posts = [];
+spanishPosts = [];
 
 posts[0] = {"Avatar": {
   "Poster": "Ms.Laura",
   "src": "graphics/laura.png",
 },"Content": {
-   "Date": "May 10th, 2017",
+   "Date": "March 15th, 2017",
    "Header": "Good Afternoon Parents!",
    "Subjects": [{
     "Header": "Math",
@@ -23,14 +24,34 @@ posts[0] = {"Avatar": {
  }
 }
 
+spanishPosts[0] = {"Avatar": {
+  "Poster": "Ms.Laura",
+  "src": "graphics/laura.png",
+},"Content": {
+   "Date": "March 15th, 2017",
+   "Header": "¡Buenos padres de la tarde!",
+   "Subjects": [{
+    "Header": "Math",
+    "Lessons":["Sumar y restar fracciones"]
+   },{
+    "Header": "Science",
+    "Lessons":["¡Laboratorio del caramelo de la roca! Los niños tomaron el caramelo de la casa de laboratorio"]
+   },{
+    "Header": "Reading",
+    "Lessons":["Hemos repasado un nuevo conjunto de vocabulario"]
+   }, {
+    "Header": "Recordatorio",
+    "Lessons": ["Revise y use estas palabras en casa"]
+  }]
+ }
+}
+
 //Post 2
-
-
 posts[1] = {"Avatar": {
   "Poster": "Ms.Laura",
   "src": "graphics/laura.png",
 },"Content": {
-   "Date": "May 9th, 2017",
+   "Date": "March 14th, 2017",
    "Header": "Good Afternoon Parents!",
    "Subjects": [{
     "Header": "Math",
@@ -42,11 +63,30 @@ posts[1] = {"Avatar": {
     "Header": "Art",
     "Lessons": ["Painting the different layers of Earth's rock"]
    },{
-    "Header": "Reading",
-    "Lessons":["We read Dr.Seuss's Cat in the Hat, Horton Hears a Who, and the Lorax"]
-   }, {
     "Header": "Reminder",
     "Lessons": ["Prepare for adding/subtracting fraction quiz tomorrow"]
+  }]
+ }
+}
+
+spanishPosts[1] = {"Avatar": {
+  "Poster": "Ms.Laura",
+  "src": "graphics/laura.png",
+},"Content": {
+   "Date": "March 14th, 2017",
+   "Header": "¡Buenos padres de la tarde!",
+   "Subjects": [{
+    "Header": "Math",
+    "Lessons":["División de fracciones"]
+   },{
+    "Header": "Science",
+    "Lessons":["Continua ciencia de la tierra, cristales y minerales"]
+   },{
+    "Header": "Art",
+    "Lessons": ["Pintura de las diferentes capas de roca de la Tierra"]
+  },{
+    "Header": "Recordatorio",
+    "Lessons": ["Prepárese para sumar / restar fracción quiz mañana"]
   }]
  }
 }
@@ -54,9 +94,10 @@ posts[1] = {"Avatar": {
 //Post 3
 posts[2] = {"Avatar": {
   "Poster": "Ms.Laura",
-  "src": "graphics/laura.png",
+  "src": "graphics/laura.png"
 },"Content": {
-   "Date": "May 8th, 2017",
+  "src": "graphics/laura.png",
+   "Date": "March 13th, 2017",
    "Header": "Happy Dr.Seuss Day!",
    "Subjects": [{
     "Header": "Math",
@@ -64,12 +105,34 @@ posts[2] = {"Avatar": {
    },{
     "Header": "Art",
     "Lessons":["The kids will make their own cat in the hats"]
-   },{
+  },{
     "Header": "Reading",
-    "Lessons": ["Dr.Seuss's Cat in the Hat, Horton Hears a Who, and the Lorax"]
-   }, {
+    "Lessons":["We read Dr.Seuss's Cat in the Hat, Horton Hears a Who, and the Lorax"]
+   },{
     "Header": "Reminder",
     "Lessons": ["Keep your kids engaged in the reduce/reuse/recycle process"]
+  }]
+ }
+}
+
+spanishPosts[2] = {"Avatar": {
+  "Poster": "Ms.Laura",
+  "src": "graphics/laura.png",
+},"Content": {
+   "Date": "March 13th, 2017",
+   "Header": "¡Día feliz del Dr.Seuss!",
+   "Subjects": [{
+    "Header": "Math",
+    "Lessons":["Multiplicación de fracciones"]
+   },{
+    "Header": "Art",
+    "Lessons":["Los niños harán su propio gato en los sombreros"]
+   },{
+      "Header": "Reading",
+      "Lessons":["Leemos Gato del Dr.Seuss en el sombrero, Horton oye a quién, y el Lorax"]
+     },{
+    "Header": "Recordatorio",
+    "Lessons": ["Mantenga a sus hijos involucrados en el proceso de reducir / reutilizar / reciclar"]
   }]
  }
 }
@@ -79,7 +142,7 @@ posts[3] = {"Avatar": {
   "Poster": "Ms.Laura",
   "src": "graphics/laura.png",
 },"Content": {
-   "Date": "May 7th, 2017",
+   "Date": "March 12th, 2017",
    "Header": "Good Afternoon Parents!",
    "Subjects": [{
     "Header": "Math",
@@ -97,6 +160,29 @@ posts[3] = {"Avatar": {
  }
 }
 
+//Post 4
+spanishPosts[3] = {"Avatar": {
+  "Poster": "Ms.Laura",
+  "src": "graphics/laura.png",
+},"Content": {
+   "Date": "March 12th, 2017",
+   "Header": "¡Buenos padres de la tarde!",
+   "Subjects": [{
+    "Header": "Math",
+    "Lessons":["Adición / Sustracción de fracciones"]
+   },{
+    "Header": "Science",
+    "Lessons":["Estamos empezando nuestra unidad en las rocas"]
+   },{
+    "Header": "Reading",
+    "Lessons": ["Comenzamos nuestras secciones de poesía"]
+   }, {
+    "Header": "Recordatorio",
+    "Lessons": ["Dr.Seuss Day es mañana"]
+  }]
+ }
+}
+
 
 //Comment-Post 1
 commentStorage[0] = []
@@ -105,8 +191,8 @@ commentStorage[0].push({"Avatar":{
   "src": "graphics/sara.png"
   },
   "Comment":{
-   "Date": "March 10th, 2017 7:25:00 PM",
-   "Text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+   "Date": "March 15th, 2017 1:25 PM",
+   "Text": "Can you post the vocab words?",
  }
 });
 
@@ -130,7 +216,7 @@ function createAgenda(agenda, priority, comments) {
   for (i=0; i < subjects.length; i++) {
     subject = subjects[i];
     secondaryElement = $("<div class='secondary'></div>");
-    isReminder = (subject.Header == "Reminder") ? true : false;
+    isReminder = (subject.Header == "Reminder" || subject.Header == "Recordatorio") ? true : false;
     if (isReminder)
       {
           secondaryElement.append("<div class='header'><p class='reminder'>"+subject.Header+"</p></div>")
@@ -238,12 +324,20 @@ function makeTextAreasGrowable() {
 }
 
 //Bootstrapping
-  function bootstrap() {
-    for (a = 0; a < posts.length; a++) {
+  function bootstrap(language) {
+    $("#agenda-list").empty();
+    usePosts = [];
+    console.log(language);
+    if (language == "English") {
+      usePosts = posts;
+    }else {
+      usePosts = spanishPosts;
+    }
+    for (a = 0; a < usePosts.length; a++) {
       if (commentStorage[a] == undefined) {
         commentStorage[a] = []
       }
-      createAgenda(posts[a], a, commentStorage[a]);
+      createAgenda(usePosts[a], a, commentStorage[a]);
     }
 
     $(".glyphicon").css("cursor", "pointer");
@@ -288,7 +382,7 @@ function makeTextAreasGrowable() {
         comment_text = $(".comment-box").eq(id).val();
         container = $(".more-container").eq(id)
         var d = new Date();
-        postComment(comment_text,d.toString(),container,id);
+        postComment(comment_text,d,container,id);
         textbox.val("");
         textbox.attr("focus", false);
         $(e.currentTarget).blur();

@@ -1,12 +1,14 @@
 #agenda-list{
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
 }
 
+#biggcontainer{
+  min-width: 911px;
+}
 #bulletin-container{
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .agenda {
@@ -20,7 +22,7 @@
 }
 
 .agenda .avatar {
-  min-width: 145px;
+  min-width: 183.2px;
   display: inline-block;
   vertical-align: top;
   margin-left: 10px;
@@ -46,9 +48,9 @@
 }
 
 .info {
-  min-width: 649.2px;
+  min-width: 616px;
   display: inline-block;
-  width: 79%;
+  width: 74%;
 }
 
 .content {

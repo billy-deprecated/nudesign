@@ -102,7 +102,7 @@ posts[3] = {"Avatar": {
 commentStorage[0] = []
 commentStorage[0].push({"Avatar":{
   "Poster": "Sara",
-  "src": "graphics/sara.png"
+  "src": "graphics/ruby.png"
   },
   "Comment":{
    "Date": "March 3rd, 2017 7:25:00 PM",
@@ -291,6 +291,7 @@ function makeTextAreasGrowable() {
         postComment(comment_text,d.toString(),container,id);
         textbox.val("");
         textbox.attr("focus", false);
+        $(e.currentTarget).blur();
         $(".big-comment-header").eq(id).html("Comments("+commentStorage[Number(id)].length+")");
       });
     }

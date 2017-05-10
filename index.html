@@ -80,20 +80,21 @@ $(document).on({
 
 // side menu option clicked
 $(document).on('click', '.subject', function(evt){
-  console.log("this:", $(this));
-  // if this item is already selected, do nothing
+  // if this subject is already selected, do nothing
   if($(this).hasClass('selectedGrade')){
     return;
   }
+
   var currentSubject;
   var newSubject;
-  // unselect the current selected grade
+  // unselect the current selected subject
   for(var i in SUBJECTS){
     if($(SUBJECTS[i]).hasClass('selectedGrade')){
       $(SUBJECTS[i]).removeClass('selectedGrade');
       currentSubject = SUBJECTS[i].slice(1);
     }
   }
+  // remove hovered class and add selected class to new subject
   for(var i in SUBJECTS){
     if($(SUBJECTS[i]).hasClass('hoveredGrade')){
       $(SUBJECTS[i]).removeClass('hoveredGrade');
@@ -101,15 +102,7 @@ $(document).on('click', '.subject', function(evt){
       newSubject = SUBJECTS[i].slice(1);
     }
   }
-  console.log("currentSubject: ", currentSubject);
-  // select the new one
-  // $(this).removeClass('hoveredGrade');
-  // $(this).addClass('selectedGrade');
-
-  // var newSubject = "Art"//$(this).get(0).id;
-  console.log("newSubject: ", newSubject);
   var newTable=$("#assignmentstable").html().replace(new RegExp(currentSubject, 'g'), newSubject);
-  console.log("newTable: ", newTable);
   $("#table").replaceWith(newTable);
 });
 
